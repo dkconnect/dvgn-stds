@@ -198,6 +198,28 @@ body {
     text-transform: uppercase;
 }
 
+.slide-in-item.hidden {
+    opacity: 0;
+    transform: translateX(-100px); /* Start off-screen to the left */
+}
+
+/* Animation class */
+.slide-in-item.visible {
+    animation: slideInFromLeft 0.8s ease-out forwards; /* forwards keeps the final state */
+}
+
+/* Keyframes for the slide-in animation */
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* Portfolio Section Styles */
 .portfolio-section {
     position: relative;
